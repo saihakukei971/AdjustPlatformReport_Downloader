@@ -2,7 +2,7 @@
 REM ====================================================
 REM Adjust Platform Report Downloader 自動実行スクリプト
 REM ====================================================
-REM 作成日: 2025/05/05
+REM 作成日: 〇〇/××/△△
 REM 
 REM このバッチファイルは、ネットワークドライブ上のAdjust Platform
 REM バッチ処理を自動実行するためのものです。
@@ -89,10 +89,10 @@ REM ============================================
 REM スクリプトの実行
 REM ============================================
 echo %TIMESTAMP% - Adjust Platform Report Downloaderの実行を開始します... >> "%LOGFILE%"
-echo %TIMESTAMP% - コマンド: %PYTHON_PATH% adjust_playwright_batch.py --headless --date %date:~0,4%%date:~5,2%%date:~8,2% >> "%LOGFILE%"
+echo %TIMESTAMP% - コマンド: %PYTHON_PATH% adjust_playwright_v4.py --headless --date %date:~0,4%%date:~5,2%%date:~8,2% >> "%LOGFILE%"
 
 REM スクリプトの実行
-%PYTHON_PATH% adjust_playwright_batch.py --headless --date %date:~0,4%%date:~5,2%%date:~8,2%
+%PYTHON_PATH% adjust_playwright_v4.py --headless --date %date:~0,4%%date:~5,2%%date:~8,2%
 
 REM 実行結果の確認
 set EXIT_CODE=%ERRORLEVEL%
